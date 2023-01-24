@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HM09__TodoWithuseReducer/static/css/main.073c9b0a.css",
+    "main.js": "/HM09__TodoWithuseReducer/static/js/main.b07d9085.js",
+    "index.html": "/HM09__TodoWithuseReducer/index.html",
+    "main.073c9b0a.css.map": "/HM09__TodoWithuseReducer/static/css/main.073c9b0a.css.map",
+    "main.b07d9085.js.map": "/HM09__TodoWithuseReducer/static/js/main.b07d9085.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.b07d9085.js"
+  ]
+}
