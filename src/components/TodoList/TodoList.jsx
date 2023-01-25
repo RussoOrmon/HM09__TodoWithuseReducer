@@ -1,18 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
+import { AuthContext } from "../../store/AuthContext";
 import TodoItem from "../TodoItem/TodoItem";
 
-const TodoList = ({ todos, setTodos, setEdit, saveEditTodo }) => {
+const TodoList = () => {
+  const context= useContext(AuthContext);
+
   return (
     <Container>
       <ul>
-        {todos.map((todo) => (
+        {context.todos.map((todo) => (
           <TodoItem
             key={todo.id}
             todo={todo}
-            todos={todos}
-            setTodos={setTodos}
-            saveEditTodo={saveEditTodo}
+          
+        
           />
         ))}
       </ul>

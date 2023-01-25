@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
+import { AuthContext } from '../../store/AuthContext'
 
-const Header = ({onAddTodoBtn}) => {
+const Header = () => {
+
+  const context  = useContext(AuthContext)
+  
 
   const addTodos=(e)=>{
     //e.preventDefault()
-    onAddTodoBtn(true)
+    context.onAddTodoBtn(true)
 
   }
 

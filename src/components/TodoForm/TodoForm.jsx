@@ -1,5 +1,6 @@
-import React, { useReducer, useState, useEffect } from "react";
+import React, { useReducer, useState, useEffect,useContext } from "react";
 import styled from "styled-components";
+import { AuthContext } from "../../store/AuthContext";
 
 const actionTypes = {
   TITLE_VALUE: "TITLE_VALUE",
@@ -44,7 +45,11 @@ const auThorReducer = (state, action) => {
   }
 };
 
-const TodoForm = ({onAddTodos}) => {
+const TodoForm = () => {
+
+  const context = useContext(AuthContext)
+  
+
   const [isFormValid, setIsFormValid] = useState(false)
 
   const [titleState, dispatchTitle] = useReducer(titleReducer, {
@@ -83,7 +88,7 @@ const TodoForm = ({onAddTodos}) => {
 
   const sendValues=(e)=>{
     e.preventDefault()
-    { isFormValid &&  onAddTodos( titleState.value , authorState.value )}
+    { isFormValid &&  context.onAddTodos( titleState.value , authorState.value )}
     titleState.value=''
     authorState.value=''
   }
